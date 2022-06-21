@@ -1,11 +1,21 @@
 // ❗ You don't need to add extra action creators to achieve MVP
-export function moveClockwise() { }
+import * as actions from './action-types'
 
-export function moveCounterClockwise() { }
+export function moveClockwise() { 
+  return {type: actions.MOVE_CLOCKWISE};
+}
 
-export function selectAnswer() { }
+export function moveCounterClockwise() {
+  return {type: actions.MOVE_COUNTERCLOCKWISE}
+ }
 
-export function setMessage() { }
+export function selectAnswer(questionNumber) {
+  return {type: actions.SET_SELECTED_ANSWER, payload: questionNumber }
+ }
+
+export function setMessage(message) {
+  return {type: actions.SET_INFO_MESSAGE, payload: message}
+ }
 
 export function setQuiz() { }
 
