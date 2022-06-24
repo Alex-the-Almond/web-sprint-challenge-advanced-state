@@ -3,14 +3,11 @@ import {connect} from 'react-redux';
 import {fetchQuiz, selectAnswer, postAnswer, setMessage} from '../state/action-creators';
 
 const mapStateToProps = state => {
-  console.log("In the map with ", state);
   return {
     quiz_id: state.quiz.quiz_id,
     question: state.quiz.question,
     answers: state.quiz.answers,
     selectedAnswer: state.selectedAnswer}
-
-  
 }
 
 function Quiz(props) {

@@ -6,7 +6,6 @@ function Message(props) {
 }
 
 const mapStateToProps = state => {
-  console.log(state);
   return {
     message: state.infoMessage
   }
